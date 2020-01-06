@@ -8,20 +8,22 @@ public class BallMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(transform.position.y);
+        //update location from server
         if (!Camera.main.GetComponentInChildren<ServerToggle>().Server)
         {
             gameObject.transform.position = new Vector2(Camera.main.GetComponentInChildren<Client>().ballX, Camera.main.GetComponentInChildren<Client>().ballY);
         }else
         {
-
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                transform.GetComponentInChildren<Rigidbody2D>().AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+                Debug.Log("space pressed");
+            }
+            //send location data to client
             if (Camera.main.GetComponentInChildren<Server>().clientConnected)
             {
                 Camera.main.GetComponentInChildren<Server>().server.Send(Camera.main.GetComponentInChildren<Server>().client, Encoding.UTF8.GetBytes(gameObject.transform.position.y.ToString()));
-
             }
-            //Debug.Log(gameObject.transform.position.x);
-            //Debug.Log(gameObject.transform.position.y);
         }
     }
 }
