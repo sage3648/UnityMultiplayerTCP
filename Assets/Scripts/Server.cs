@@ -13,27 +13,39 @@ public class Server : MonoBehaviour
     public PhysicsMaterial2D Material;
     private bool isServer;
     private Vector2 ballLocation;
-    private List<String> clients; 
-    TcpServer server = new TcpServer("0.0.0.0", 9000, false, null, null);
+    public String client; 
+    public bool clientConnected; 
+    public TcpServer server = new TcpServer("0.0.0.0", 9000, false, null, null);
 
     void Start()
     {
+     
         isServer = Camera.main.GetComponentInChildren<ServerToggle>().Server;
         if (isServer)
         {
+            clientConnected = false; 
             server.ClientConnected = ClientConnected;
             server.DataReceived = DataReceived;
             server.ClientDisconnected = ClientDisconnected;
             server.Start();
+            Debug.Log("Server Started");
             Console.WriteLine("Server Started");
             Ball.AddComponent<CircleCollider2D>();
             Ball.AddComponent<Rigidbody2D>();
             Ball.GetComponentInChildren<Rigidbody2D>().sharedMaterial = Material;
         }
     }
+    private void Update()
+    {
+        Debug.Log(ballLocation.x);
+        Debug.Log(ballLocation.y);
+
+    }
 
     private Task ClientDisconnected(string arg1, DisconnectReason arg2)
     {
+        Debug.Log("Client Disconnected");
+
         throw new NotImplementedException();
     }
 
@@ -44,19 +56,20 @@ public class Server : MonoBehaviour
 
     private async Task ClientConnected(string arg)
     {
-        clients.Add(arg);
+        clientConnected = true;
+        client = arg;
     }
 
     private void LateUpdate()
     {
-        if (isServer)
+
+        if (isServer && clientConnected == true)
         {
-            ballLocation = Ball.transform.position;
-            for(int i = 0; i < clients.Count; i++)
-            {
-                server.Send(clients[i], Encoding.UTF8.GetBytes(ballLocation.x.ToString()));
-                server.Send(clients[i], Encoding.UTF8.GetBytes(ballLocation.y.ToString()));
-            }
+            //ballLocation = Ball.transform.position;
+            //for(int i = 0; i < clients.Count; i++)
+            //{
+               
+            //}
         }
     }
 }

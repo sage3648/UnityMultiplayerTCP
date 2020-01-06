@@ -41,7 +41,7 @@ public class Client : MonoBehaviour
     private async Task DataReceived(byte[] arg)
     {
         Debug.Log("Data received: " + Encoding.UTF8.GetString(arg));
-        ballX = float.Parse(Encoding.UTF8.GetString(arg));
+        ballX = 0f;
         ballY = float.Parse(Encoding.UTF8.GetString(arg));
      
     }
