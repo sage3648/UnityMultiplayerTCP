@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{452CF0E8-8A55-74BE-0C10-F7A89FA88915}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BallMovement.cs">
+    <Files>
+      <File FileName="Assets/Scripts/ServerToggle.cs" Line="7" Column="24" />
+      <File FileName="Assets/Scripts/Server.cs" Line="48" Column="6" />
+      <File FileName="Assets/Scripts/Client.cs" Line="46" Column="6" />
+      <File FileName="Assets/Scripts/BallMovement.cs" Line="6" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UnityMultiplayerTCP" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="BallMovement.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="857a676c-b3ce-4ca9-8bd9-8101e23f74c9" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
