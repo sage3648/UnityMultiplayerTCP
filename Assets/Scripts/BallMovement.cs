@@ -6,7 +6,7 @@ using UnityEngine;
 public class BallMovement : MonoBehaviour
 {
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //update location from server
         if (!Camera.main.GetComponentInChildren<ServerToggle>().Server)
@@ -14,6 +14,7 @@ public class BallMovement : MonoBehaviour
             gameObject.transform.position = new Vector2(Camera.main.GetComponentInChildren<Client>().ballX, Camera.main.GetComponentInChildren<Client>().ballY);
         }else
         {
+            Debug.Log(transform.position.ToString("F6")); 
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 transform.GetComponentInChildren<Rigidbody2D>().AddForce(Vector2.up * 5, ForceMode2D.Impulse);

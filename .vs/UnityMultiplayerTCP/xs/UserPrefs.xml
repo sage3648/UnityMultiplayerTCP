@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{452CF0E8-8A55-74BE-0C10-F7A89FA88915}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BallMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ballPostion.cs">
     <Files>
       <File FileName="Assets/Scripts/ServerToggle.cs" Line="7" Column="24" />
-      <File FileName="Assets/Scripts/Server.cs" Line="72" Column="12" />
-      <File FileName="Assets/Scripts/Client.cs" Line="44" Column="20" />
-      <File FileName="Assets/Scripts/BallMovement.cs" Line="12" Column="10" />
-      <File FileName="Assets/SimpleTcp-master-2/SimpleTcp/TcpServer.cs" Line="257" Column="1" />
+      <File FileName="Assets/Scripts/Server.cs" />
+      <File FileName="Assets/Scripts/Client.cs" />
+      <File FileName="Assets/Scripts/BallMovement.cs" Line="25" Column="27" />
+      <File FileName="Assets/SimpleTcp-master-2/SimpleTcp/TcpServer.cs" />
+      <File FileName="Assets/Scripts/ballPostion.cs" Line="3" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +14,7 @@
           <Node name="UnityMultiplayerTCP" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="BallMovement.cs" selected="True" />
+                <Node name="ballPostion.cs" selected="True" />
               </Node>
               <Node name="SimpleTcp-master-2" expanded="True">
                 <Node name="SimpleTcp" expanded="True" />
@@ -26,7 +27,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="857a676c-b3ce-4ca9-8bd9-8101e23f74c9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2f599fe6-6757-4756-a5da-96a59b841f40" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

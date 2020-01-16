@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BallMovement.cs" />
+    <Compile Include="Assets\Scripts\ballPostion.cs" />
     <Compile Include="Assets\Scripts\Client.cs" />
     <Compile Include="Assets\Scripts\Server.cs" />
     <Compile Include="Assets\Scripts\ServerToggle.cs" />

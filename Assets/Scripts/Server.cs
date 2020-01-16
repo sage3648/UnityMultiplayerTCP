@@ -35,12 +35,6 @@ public class Server : MonoBehaviour
             Ball.GetComponentInChildren<Rigidbody2D>().sharedMaterial = Material;
         }
     }
-    private void Update()
-    {
-        Debug.Log(ballLocation.x);
-        Debug.Log(ballLocation.y);
-
-    }
 
     private Task ClientDisconnected(string arg1, DisconnectReason arg2)
     {
