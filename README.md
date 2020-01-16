@@ -1,2 +1,2 @@
 # UnityMultiplayerTCP
-Unity multiplayer project, over tcp socket
+Unity multiplayer project. Simple game over tcp socket. 
